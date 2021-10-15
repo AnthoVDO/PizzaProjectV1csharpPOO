@@ -1,0 +1,16 @@
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\bin\Debug\net5.0\PizzaProjectV1csharpPOO.exe
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\bin\Debug\net5.0\PizzaProjectV1csharpPOO.deps.json
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\bin\Debug\net5.0\PizzaProjectV1csharpPOO.runtimeconfig.json
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\bin\Debug\net5.0\PizzaProjectV1csharpPOO.runtimeconfig.dev.json
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\bin\Debug\net5.0\PizzaProjectV1csharpPOO.dll
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\bin\Debug\net5.0\ref\PizzaProjectV1csharpPOO.dll
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\bin\Debug\net5.0\PizzaProjectV1csharpPOO.pdb
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\obj\Debug\net5.0\PizzaProjectV1csharpPOO.csproj.AssemblyReference.cache
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\obj\Debug\net5.0\PizzaProjectV1csharpPOO.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\obj\Debug\net5.0\PizzaProjectV1csharpPOO.AssemblyInfoInputs.cache
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\obj\Debug\net5.0\PizzaProjectV1csharpPOO.AssemblyInfo.cs
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\obj\Debug\net5.0\PizzaProjectV1csharpPOO.csproj.CoreCompileInputs.cache
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\obj\Debug\net5.0\PizzaProjectV1csharpPOO.dll
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\obj\Debug\net5.0\ref\PizzaProjectV1csharpPOO.dll
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\obj\Debug\net5.0\PizzaProjectV1csharpPOO.pdb
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\obj\Debug\net5.0\PizzaProjectV1csharpPOO.genruntimeconfig.cache
