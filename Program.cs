@@ -16,9 +16,15 @@ namespace PizzaProjectV1csharpPOO
     // if empty string or null + enter the user have finished;
     class CustomPizza : Pizza
     {
-        public CustomPizza()
+        static int pizzaNumber = 0;
+        
+        public CustomPizza() : base($"Custom", 5, false, null)
         {
-
+            pizzaNumber++;
+            this.ingredients = askIngredients();
+            
+            this.name = "Custom pizza " + pizzaNumber;
+            this.price = 5 + (1.5f * this.ingredients.Count());
         }
 
         public static List<string> askIngredients()
@@ -27,19 +33,34 @@ namespace PizzaProjectV1csharpPOO
             Console.WriteLine("Hello, welcome to the custom pizza generator");
             while (true)
             {
-                Console.Write("Please add an ingredient (PRESS ENTER WHILE FINISHED: ");
+                Console.Write($"Please add an ingredient for you custom pizza number {pizzaNumber} (PRESS ENTER WHILE FINISHED: ");
+                
                 string ingredient = Console.ReadLine();
+
+                
+
                 if (string.IsNullOrEmpty(ingredient))
                 {
                     break;
                 }
                 else
                 {
-                    ingredients.Add(ingredient);
+                    if (!ingredients.Contains(ingredient))
+                    {
+                        ingredients.Add(ingredient);
+                    }
+                    else
+                    {
+                        Console.WriteLine("This ingredient is already in the list !");
+                    }
+                    
                 }
                 
+                Console.WriteLine("Ingredients: "+String.Join(", ", ingredients));
+                Console.WriteLine();
+                
             }
-            Console.WriteLine("Thank you, your custom pizza is now available");
+            Console.WriteLine($"Thank you, your custom pizza {pizzaNumber} is now available");
             Console.WriteLine("");
 
             return ingredients;
@@ -51,11 +72,11 @@ namespace PizzaProjectV1csharpPOO
     // Create pizza class with name, price, vegetarian or no, constructor, show function
     class Pizza
     {
-        string name;
-        public float price{ get; private set; }
+        protected string name;
+        public float price{ get; protected set; }
         public bool vegetarian { get; private set; }
-        public List<string> ingredients { get; private set; }
-        public Pizza(string name = "Custom", float price = 5, bool vegetarian = false, List<string> ingredients = null)
+        public List<string> ingredients { get; protected set; }
+        public Pizza(string name, float price, bool vegetarian, List<string> ingredients)
         {
             this.name = name;
             this.price = price;
@@ -105,9 +126,9 @@ namespace PizzaProjectV1csharpPOO
             Console.OutputEncoding = Encoding.UTF8;
 
 
-            // Ask ingredients
+            
 
-            List<string> ingredientsForCustom = askIngredients();
+            
             // Creating the pizza
             var pizzaList = new List<Pizza>{
                 new Pizza("Proscito", 9.5f, false, new List<string>{ "tomates", "mozzarella", "proscito"}),
@@ -116,19 +137,21 @@ namespace PizzaProjectV1csharpPOO
                 new Pizza("Hunter", 13, false, new List<string>{"Tomates", "mozzarella", "champignons", "lardons", "oignons", "ail" }),
                 new Pizza("Hawaï", 12.5f, true, new List<string>{"Tomates", "mozzarella", "jambon", "ananas" }),
                 new Pizza("Margarita", 8.5f, true, new List<string>{"Tomates", "mozzarella" }),
-                new CustomPizza("Custom", 5, false, )
+                new CustomPizza(),
+                new CustomPizza(),
+                new CustomPizza()
             };
 
             //pizzaList = pizzaList.Where(p => p.ingredients.Contains("ail")).ToList();
             
-            //foreach(Pizza p in pizzaList)
-            //{
+            foreach(Pizza p in pizzaList)
+            {
                 
                 
-            //        p.ShowPizza();
+                   p.ShowPizza();
                 
                 
-            //}
+            }
 
 
 
