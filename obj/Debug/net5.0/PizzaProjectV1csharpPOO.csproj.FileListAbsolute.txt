@@ -14,3 +14,5 @@ D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProje
 D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\obj\Debug\net5.0\ref\PizzaProjectV1csharpPOO.dll
 D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\obj\Debug\net5.0\PizzaProjectV1csharpPOO.pdb
 D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\obj\Debug\net5.0\PizzaProjectV1csharpPOO.genruntimeconfig.cache
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\bin\Debug\net5.0\Newtonsoft.Json.dll
+D:\Dev\Git_racine\cSharp-dotnet-learn\coursC#\PizzaProjectV1csharpPOO\PizzaProjectV1csharpPOO\obj\Debug\net5.0\PizzaProjectV1csharpPOO.csproj.CopyComplete

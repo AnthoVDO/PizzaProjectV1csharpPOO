@@ -1,7 +1,10 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Text;
+
 
 namespace PizzaProjectV1csharpPOO
 {
@@ -72,7 +75,7 @@ namespace PizzaProjectV1csharpPOO
     // Create pizza class with name, price, vegetarian or no, constructor, show function
     class Pizza
     {
-        protected string name;
+        public string name { get; protected set; }
         public float price{ get; protected set; }
         public bool vegetarian { get; private set; }
         public List<string> ingredients { get; protected set; }
@@ -118,18 +121,8 @@ namespace PizzaProjectV1csharpPOO
     
     class Program
     {
-        
-
-        static void Main(string[] args)
+        public static List<Pizza> GetPizzasFromCode()
         {
-            // To show euro symbole
-            Console.OutputEncoding = Encoding.UTF8;
-
-
-            
-
-            
-            // Creating the pizza
             var pizzaList = new List<Pizza>{
                 new Pizza("Proscito", 9.5f, false, new List<string>{ "tomates", "mozzarella", "proscito"}),
                 new Pizza("4 Cheese", 11, true, new List<string>{"Tomates", "mozzarella", "bel paese", "gorgonzola", "taleggio"}),
@@ -137,22 +130,70 @@ namespace PizzaProjectV1csharpPOO
                 new Pizza("Hunter", 13, false, new List<string>{"Tomates", "mozzarella", "champignons", "lardons", "oignons", "ail" }),
                 new Pizza("Hawaï", 12.5f, true, new List<string>{"Tomates", "mozzarella", "jambon", "ananas" }),
                 new Pizza("Margarita", 8.5f, true, new List<string>{"Tomates", "mozzarella" }),
-                new CustomPizza(),
-                new CustomPizza(),
-                new CustomPizza()
+                //new CustomPizza(),
+                //new CustomPizza(),
+                //new CustomPizza()
             };
 
-            //pizzaList = pizzaList.Where(p => p.ingredients.Contains("ail")).ToList();
+        return pizzaList;
+        }
+
+        public static List<Pizza> GetPizzasFromFile(string filename)
+        {
             
-            foreach(Pizza p in pizzaList)
+            //1) download data from json  
+            //2) deserialize
+
+            string pizzas = null;
+            try
             {
-                
-                
-                   p.ShowPizza();
-                
-                
+                pizzas = File.ReadAllText(filename);
+            }
+            catch 
+            {
+                Console.WriteLine("Error: this file doesn't exist or the wrong");
+                return null;
             }
 
+            List<Pizza> pizzaList = null;
+            try
+            {
+                pizzaList = JsonConvert.DeserializeObject<List<Pizza>>(pizzas);
+            }
+            catch
+            {
+                Console.WriteLine("Error: Failled to convert json to List");
+                return null;
+            }
+
+            return pizzaList;
+        }
+
+        public static void GenerateJsonFile(List<Pizza> pizzaList, string filename)
+        {
+            //1) serialize
+            //2) write in a text file pizza.json
+
+            string serializedPizzaList = JsonConvert.SerializeObject(pizzaList);
+
+            File.WriteAllText(filename, serializedPizzaList);
+
+            return; 
+        }
+
+        static void Main(string[] args)
+        {
+            // To show euro symbole
+            Console.OutputEncoding = Encoding.UTF8;
+
+            // Creating the pizza
+
+            var pizzaList = GetPizzasFromFile("pizza.json");
+
+            foreach (var pizza in pizzaList)
+            {
+                pizza.ShowPizza();
+            }
 
 
         }
